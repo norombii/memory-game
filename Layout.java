@@ -47,6 +47,9 @@ public class Layout {
             System.out.println();
             System.out.println();
         }
+    }
 
+    public Layout[][] getLayout() {
+        return layout;
     }
 }
