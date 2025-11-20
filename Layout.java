@@ -3,8 +3,7 @@ import java.util.ArrayList;
 public class Layout {
     private Card[][] layout = new Card[6][4];
     
-    public ArrayList<String> symbolList = new ArrayList<String>("✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨",
-     "✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨");
+    public ArrayList<String> symbolList = new ArrayList<String>("✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨", "✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨");
 
     public Layout() {
         fillLayout();
@@ -17,8 +16,8 @@ public class Layout {
         for (Card[] card : layout) {
             for (int j = 0; j < layout[0].length; j++) {
                 int randomIndex = (int) (Math.random() * (symbolList.size()-1));
-                card[j] = new Card(symbolList[randomIndex], true);
-                symbolList[randomIndex].remove(randomIndex);
+                card[j] = new Card(symbolList(randomIndex), true);
+                symbolList(randomIndex).remove(randomIndex);
             }
         }
         return layout;
