@@ -1,25 +1,28 @@
 public class Card {
     private boolean isFlipped = false;
-    private boolean DEBUG_MODE = true;
-    private boolean hasSymbol = false;
+    //private boolean DEBUG = true;
 
     public static String CARD_DISPLAY = "*";
-    public static String SYMBOL_DISPLAY;
+    private String symbolDisplay;
 
-    public Card(String symbol, boolean hasSymbol) {
-        symbol = SYMBOL_DISPLAY;
-        this.hasSymbol = hasSymbol;
+    public Card(String symbDis) {
+        symbolDisplay = symbDis;
     }
 
     public String getSymbol() {
-        return SYMBOL_DISPLAY;
+        return symbolDisplay;
     }
 
     public boolean getIsFlipped() {
-        return isUncovered;
+        return isFlipped;
     }
 
-    public void setIsFlipped() {
-        isUncovered = true;
+    public void setIsFlipped(String s) {
+        if (s.equals("false")) {
+            isFlipped = false;
+        } 
+        else {
+            isFlipped = true;
+        }
     }
 }
