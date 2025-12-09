@@ -4,14 +4,15 @@ import java.util.Arrays;
 public class Layout {
     private Card[][] layout = new Card[4][6];
     
-    public static ArrayList<String> symbolList = new ArrayList<String>(Arrays.asList("✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨", "✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨"));
+    public static ArrayList<String> symbolList = new ArrayList<String>(Arrays.asList("✦", "✧", "✰", "▣", "❤", "♡", "❄", 
+    "◯", "◎", "☢", "⇦", "⇨", "✦", "✧", "✰", "▣", "❤", "♡", "❄", "◯", "◎", "☢", "⇦", "⇨"));
 
     public Layout() {
         fillLayout();
     }
 
     // fills each card with a symbol, (each symbol is repeated once)
-    // then removing the symbol from symbolList.
+    // then removes the symbol from symbolList.
     // returns the filled layout with symbols added to each card.
     public Card[][] fillLayout() {
         for (int i = 0; i < layout.length; i++) {
