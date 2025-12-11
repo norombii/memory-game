@@ -1,6 +1,6 @@
 public class Card {
     private boolean isFlipped = false;
-    private boolean DEBUG = true;
+    public boolean DEBUG = false;
 
     public static String CARD_DISPLAY = "*";
     private String symbolDisplay;
@@ -26,8 +26,9 @@ public class Card {
         }
     }
 
+
     public String toString() {
-        if (isFlipped) {
+        if (isFlipped || DEBUG) {
             return symbolDisplay;
         } 
         else {

@@ -27,7 +27,6 @@ public class Layout {
 
     // this method is copied and revised from on of my previous works with printing 2D arrays
     public void printLayout() {
-
         //print the column numbers
         for (int k = 0; k <= layout[0].length-1; k++) { 
             if (k == 0) {
