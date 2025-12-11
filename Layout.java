@@ -45,7 +45,7 @@ public class Layout {
         for (int i = 0; i < layout.length; i++) {
             System.out.print(i + " | ");
             for (int j = 0; j < layout[0].length; j++) {
-                System.out.print(layout[i][j].getSymbol() + "   ");
+                System.out.print(layout[i][j].toString() + "   ");
             }
             System.out.println();
             System.out.println();
