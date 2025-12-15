@@ -27,6 +27,22 @@ public class Game {
         System.out.flush();
     }
 
+    // checks if the two cards match
+    public boolean checkCoordinates(int x1, int y1, int x2, int y2) {
+        for (int i = 0; i < layout.length; i++) {
+            for (int j = 0; j < layout[0].length; j++) {
+               if (layout[y1][x1].getSymbol().equals(layout[y2][x2].getSymbol())) {
+                        System.out.println("Match!");
+                        matchFound++;
+                       System.out.println("Matches found: " + (matchFound));
+                        return true;
+               }
+            }
+        }
+        return false;
+    }
+
+
     public void runLayout() {
 
         while (matchFound <= 12) {
@@ -69,10 +85,10 @@ public class Game {
                     layout[y2][x2].setIsFlipped("true");
                     board.printLayout();
 
-                    if (layout[y1][x1].getSymbol().equals(layout[y2][x2].getSymbol())) {
-                        System.out.println("Match!");
-                        matchFound++;
-                       System.out.println("Matches found: " + (matchFound));
+                    if (checkCoordinates(x1, y1, x2, y2)) {
+                        System.out.println("~~");
+                        System.out.println("You chosen cards: " + layout[y1][x1].getSymbol() + " and " + layout[y2][x2].getSymbol());
+                        System.out.println("~~");
                     }
 
                     else {
