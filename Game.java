@@ -31,11 +31,11 @@ public class Game {
     public boolean checkCoordinates(int x1, int y1, int x2, int y2) {
         for (int i = 0; i < layout.length; i++) {
             for (int j = 0; j < layout[0].length; j++) {
-               if (layout[y1][x1].getSymbol().equals(layout[y2][x2].getSymbol())) {
+               if (layout[i][j] == (layout[y1][x1]) || layout[i][j] == layout[y2][x2]) 
+                    if(layout[y1][x1].getSymbol().equals(layout[y2][x2].getSymbol())) {
                         System.out.println("Match!");
-                        matchFound++;
-                       System.out.println("Matches found: " + (matchFound));
-                        return true;
+                        System.out.println("Matches found: " + (matchFound));
+                            return true;
                }
             }
         }
