@@ -1,5 +1,5 @@
 public class Card {
-    private boolean isFlipped = false;
+    private boolean isFlipped = true;
     public boolean DEBUG = false;
 
     public static String CARD_DISPLAY = "*";

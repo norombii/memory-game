@@ -35,6 +35,7 @@ public class Game {
                     if(layout[y1][x1].getSymbol().equals(layout[y2][x2].getSymbol())) {
                         System.out.println("Match!");
                         System.out.println("Matches found: " + (matchFound));
+                        matchFound++;
                             return true;
                }
             }
